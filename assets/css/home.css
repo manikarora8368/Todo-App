@@ -1,0 +1,180 @@
+/* Body */
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("/images/outer-background.jpg");
+}
+
+/* General class for box-sizing */
+.box-sizing {
+  box-sizing: border-box;
+}
+
+/* setting main div */
+#outer-div {
+  width: 50%;
+  margin: auto;
+  margin-top: 2rem;
+  min-height: 35rem;
+  border: 2px solid rgb(134, 50, 50);
+  box-shadow: 4px 8px 12px rgba(255, 255, 255, 0.8);
+  background-image: url("/images/inner-background.jpg");
+}
+#main-div {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+#main-heading {
+  text-align: center;
+  width: 100%;
+  height: 8rem;
+  font-size: 1.5rem;
+  color: #eb394e;
+}
+
+/* description box section*/
+
+#description-box {
+  width: 100%;
+  margin-top: 0;
+  height: 4rem;
+  border-top: 2px solid black;
+  padding: 0.6rem;
+}
+label {
+  font-size: 1rem;
+  color: white;
+}
+#description {
+  height: 1.5rem;
+  width: 90%;
+  color: black;
+}
+.input {
+  background: none;
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+#input:focus {
+  outline: none;
+}
+::placeholder {
+  color: black;
+}
+
+/* category section */
+
+#category {
+  border: 2px solid black;
+  border-left: 0;
+  padding: 0.6rem;
+  width: 50%;
+  height: 4rem;
+}
+#category select {
+  width: 100%;
+  color: black;
+}
+#category select option {
+  color: black;
+}
+
+/* date section */
+
+#date {
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  width: 50%;
+  padding: 0.6rem;
+  height: 4rem;
+}
+#date input {
+  width: 100%;
+}
+
+/* add task button */
+#submit-button {
+  width: 20%;
+  height: 3rem;
+  margin: auto;
+  margin-top: 1rem;
+}
+#submit-button button {
+  height: 100%;
+  color: white;
+  width: 100%;
+  margin: auto;
+  background-color: rgba(255, 0, 0, 0.6);
+}
+#submit-button button i {
+  margin-right: 0.8rem;
+}
+
+/* display task main div */
+#display-main {
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  display: flex;
+  box-sizing: border-box;
+  margin-top: 1rem;
+}
+
+/* display task section for description and date */
+#display-des-date {
+  width: 75%;
+  color: black;
+  padding: 0.8rem;
+  padding-left: 1.4rem;
+}
+#display-des {
+  text-transform: capitalize;
+  margin-bottom: 0.5rem;
+}
+#display-date i {
+  margin-right: 0.2rem;
+}
+
+/* display task section for category */
+#display-category {
+  border: 2px solid white;
+  margin: 1rem 0.4rem;
+  height: 3rem;
+  width: 4rem;
+  text-align: center;
+  background-color: rgba(204, 34, 247, 1);
+  color: white;
+}
+
+/* delete task button */
+#delete-button {
+  height: 1.5rem;
+  margin-top: 1.8rem;
+  margin-left: 2rem;
+  width: 2rem;
+}
+#delete-button i {
+  font-size: 1.5rem;
+}
+
+/* RESPONSIVE DESIGN SECTION */
+/* THE ABOVE CSS CODE IS WRITTEN IN SUCH A WAY THAT BY CHANGING FEW VALUES IT AUTOMATICALLY ADJUTS ITSELF AND HENCE IT IS RESPONSIVE IN NATURE. */
+
+@media screen and (max-width: 1000px) {
+  #outer-div {
+    width: 75%;
+  }
+}
+@media screen and (max-width: 768px) {
+  #outer-div {
+    width: 75%;
+  }
+}
+@media screen and (max-width: 600px) {
+  #outer-div {
+    width: 100%;
+  }
+}

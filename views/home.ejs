@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Head section -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- linking css files -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/css/home.css">
+
+    <!-- Adding favicon to the webpage -->
+    <link rel="icon" href="\images\favicon.png" type="image/gif" sizes="16x16">
+    <title>ToDo app</title>
+</head>
+<!-- Body section -->
+<body>
+    <!-- adding form to enter the task user needs to perform -->
+    <form action="/add_work" method="POST">
+    <div id="outer-div">
+        <div id="main-div">
+            <div id="main-heading" class="box-sizing">
+                <h1>TODO App</h1>
+            </div>
+            <div id="description-box" class="box-sizing">
+                <label for="">DESCRIPTION</label>
+                <br>
+                <input type="text" name="description" id="description" class="input" placeholder="what you need to do?" required>
+            </div>
+            <br>
+            <div id="category" class="box-sizing">
+                <label for="">CATEGORY</label>
+                <br>
+                <select name="category" required class="input">
+                    <option value="personal">personal</option>
+                    <option value="work">work</option>
+                    <option value="school">school</option>
+                    <option value="cleaning">cleaning</option>
+                    <option value="other">other</option>
+                </select>
+            </div>
+            <div id="date" class="box-sizing">
+                <label for="">DATE</label>
+                <br>
+                <input type="date" name="date" class="input" required>
+            </div>
+            <div id="submit-button" class="box-sizing">
+                <button type="submit" name="submit"><i class="fas fa-plus"></i> ADD TASK</button>
+            </div>
+        </div>
+    <!-- Display tasks section -->
+        <%for(let i of addWork){%>
+        <div id="display-main">
+            <div id="display-des-date" class="box-sizing">
+                <div id="display-des" class="box-sizing">
+                <%=i.description%>
+                </div>
+                <div id="display-date">
+                <i class="fas fa-calendar-week"></i>
+                <%=i.date%>
+                </div>
+            </div>
+            <div id="display-category" class="box-sizing"><p><%=i.category%></p></div>
+            <div id="delete-button"><a href="/delete_work/<%= i._id %>"><i class="fas fa-times-circle" style="color: red;"></i></a></div>
+        </div>
+        <%}%>
+    </div>
+    </form>
+</body>
+</html>
