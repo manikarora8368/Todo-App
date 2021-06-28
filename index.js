@@ -16,7 +16,7 @@ app.set('view engine' , 'ejs');
 app.set('views', './views');
 
 // checking if server runs properly or have an error
-app.listen(port ,function(err){
+app.listen(process.env.PORT ,function(err){
     if(err){
         console.log(`An error occured ${err}`);
         return;
