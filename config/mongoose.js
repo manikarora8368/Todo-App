@@ -3,8 +3,8 @@ const mongoose = require('mongoose');
 
 // establishing the connection with mongoose
 // mongoose.connect('mongodb://localhost/todo_list');
-
-mongoose.connect(`mongodb+srv://Manik:${encodeURIComponent('Manik@1204')}@todoapp.njirc.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`,{useNewUrlParser: true});
+console.log(process.env.TodoDB);
+mongoose.connect(process.env.TodoDB,{useNewUrlParser: true});
 var db = mongoose.connection;
 
 // if error 
