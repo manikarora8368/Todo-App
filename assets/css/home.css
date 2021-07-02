@@ -18,6 +18,7 @@ body {
   margin-top: 2rem;
   min-height: 35rem;
   border: 2px solid rgb(134, 50, 50);
+  box-sizing: border-box;
   box-shadow: 4px 8px 12px rgba(255, 255, 255, 0.8);
   background-image: url("/images/inner-background.jpg");
 }
@@ -143,7 +144,7 @@ label {
   border: 2px solid white;
   margin: 1rem 0.4rem;
   height: 3rem;
-  width: 4rem;
+  min-width: 4rem;
   text-align: center;
   background-color: rgba(204, 34, 247, 1);
   color: white;
@@ -176,5 +177,18 @@ label {
 @media screen and (max-width: 600px) {
   #outer-div {
     width: 100%;
+  }
+  #submit-button {
+    width: 40%;
+    height: 3rem;
+    margin: auto;
+    margin-top: 1rem;
+  }
+  #submit-button button {
+    height: 100%;
+    color: white;
+    width: 100%;
+    margin: auto;
+    background-color: rgba(255, 0, 0, 0.6);
   }
 }
