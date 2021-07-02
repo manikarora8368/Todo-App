@@ -2,9 +2,8 @@
 const mongoose = require('mongoose');
 
 // establishing the connection with mongoose
-// mongoose.connect('mongodb://localhost/todo_list');
-console.log(process.env.TodoDB);
-mongoose.connect(process.env.TodoDB,{useNewUrlParser: true});
+
+mongoose.connect(`${process.env.TodoDB}`,{useNewUrlParser: true});
 var db = mongoose.connection;
 
 // if error 
